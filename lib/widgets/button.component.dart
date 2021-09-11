@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 Widget CalculatorButton(
-    {required String text, required dynamic method, int flex = 1}) {
+    {required Widget widget, required dynamic method, int flex = 1}) {
   return Expanded(
     flex: flex,
     child: Padding(
@@ -9,7 +9,7 @@ Widget CalculatorButton(
       child: Container(
         child: ElevatedButton(
           onPressed: method,
-          child: Text(text),
+          child: widget,
         ),
       ),
     ),
